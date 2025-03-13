@@ -14,7 +14,7 @@ contract Assignment6 {
     // Modifier to check if sender has enough balance
     modifier hasEnoughBalance(uint amount) {
         // Fill in the logic using require
-        require(amount <= balances[msg.sender], "Insufficent balance")
+        require(amount <= balances[msg.sender], "Insufficent balance");
         _;
     }
 
