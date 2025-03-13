@@ -38,7 +38,7 @@ contract Assignment6 {
     // - Emit the `FundsWithdrawn` event
     function withdraw(uint amount) external hasEnoughBalance(amount) {
         // decrement user balance from balances mapping
-        balances[msg.sender] -= msg.value;
+        balances[msg.sender] -= amount;
 
         // send tokens to the caller
         payable(msg.sender).transfer(amount);
@@ -54,7 +54,6 @@ contract Assignment6 {
     // - Return the contract's balance
     function getContractBalance() public view returns (uint) {
         // return the balance of the contract
-        return (address(This).balance);
-
+        return address(This).balance;
     }
 }
