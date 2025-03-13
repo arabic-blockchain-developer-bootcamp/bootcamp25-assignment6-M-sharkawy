@@ -22,7 +22,7 @@ contract Assignment6 {
     // This function should:
     // - Be external and payable
     // - Emit the `FundsDeposited` event
-    function deposit() payable external {
+    function deposit() external payable {
         // increment user balance in balances mapping
         balances[msg.sender] += msg.value; 
 
@@ -36,7 +36,7 @@ contract Assignment6 {
     // - Take one parameter: `amount`
     // - Use the `hasEnoughBalance` modifier
     // - Emit the `FundsWithdrawn` event
-    function withdraw(uint amount) external hasEnoughBalance {
+    function withdraw(uint amount) external hasEnoughBalance(amount) {
         // decrement user balance from balances mapping
         balances[msg.sender] -= msg.value;
 
