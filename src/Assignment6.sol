@@ -52,7 +52,7 @@ contract Assignment6 {
     // This function should:
     // - Be public and view
     // - Return the contract's balance
-    function getContractBalance() view public return(uint) {
+    function getContractBalance() public view returns (uint) {
         // return the balance of the contract
         return (address(This).balance)
 
