@@ -54,6 +54,6 @@ contract Assignment6 {
     // - Return the contract's balance
     function getContractBalance() public view returns (uint) {
         // return the balance of the contract
-        return address(This).balance;
+        return address(this).balance;
     }
 }
